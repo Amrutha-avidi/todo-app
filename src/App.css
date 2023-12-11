@@ -1,0 +1,98 @@
+body {
+  background-color: #17181f;
+  color: #ddd;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+main{
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+form {
+  border: 3px solid #303130;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+}
+
+form input[type='text'] {
+  background: none;
+  border: 0;
+  padding: 0px 8px;
+  display: block;
+  width: 100%;
+  color:white
+}
+
+form button {
+  background-color: #61dafb;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+div.task{
+  background-color: #303130;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+  transition: opacity .3s linear;
+  
+}
+
+
+div.task svg{
+  margin-right: 8px;
+  fill:#61dafb
+} 
+div.task span{
+  position: relative;
+}
+.task-name{
+  flex-grow: 1;
+}
+button.trash{
+  background: none;
+  border:none;
+  cursor: pointer;
+}
+button.trash svg{
+  fill:grey
+}
+div.task.done{
+  opacity: 0.5;
+}
+div.task span:before{
+  content: '';
+  display: block;
+  width: 0%;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top:10px;
+  transition: width .2s linear;
+}
+div.checkbox{
+  display: flex;
+  align-content: center;
+}
+div.task.done span:before{
+  width: 100%;
+}
+
+h1,h2{
+  text-align: center;
+}
+
+div.task input{
+  border:2px solid #555;
+  border-radius: 5px;
+  padding: 2px 4px;
+
+}
